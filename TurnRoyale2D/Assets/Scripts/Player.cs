@@ -5,11 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : NetworkBehaviour
 {
-    public bool isLocalPlayer;
     public float health = 10f;
     public void HandleMovement()
     {
-        if (isLocalPlayer)
+        if (IsLocalPlayer)
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
